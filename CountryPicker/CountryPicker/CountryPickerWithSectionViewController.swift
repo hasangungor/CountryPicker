@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class CountryPickerWithSectionViewController: CountryPickerController {
+@objc open class CountryPickerWithSectionViewController: CountryPickerController {
 
     // MARK: - Variables
     var sections: [Character] = []
@@ -43,6 +43,7 @@ open class CountryPickerWithSectionViewController: CountryPickerController {
     }
     
     @discardableResult
+    @objc
     open override class func presentController(on viewController: UIViewController,
                                                handler:@escaping (_ country: Country) -> Void) -> CountryPickerWithSectionViewController {
         let controller = CountryPickerWithSectionViewController()

@@ -9,16 +9,16 @@
 import Foundation
 import UIKit
 
-open class Country {
+@objc open class Country {
 
     // MARK:- Variable
-    open var countryCode: String
+    @objc open var countryCode: String
 
     /// Name of the country
-    open var countryName: String
+    @objc open var countryName: String
     
     /// - Returns: Dialing code for country instance with a `+` sign
-    open var dialingCode: String? {
+    @objc open var dialingCode: String? {
         guard let digitCountrycode = digitCountrycode else {
             return nil
         }
@@ -27,12 +27,12 @@ open class Country {
     }
     
     /// - Returns: Digit country code without a `+` sign
-    open var digitCountrycode: String? {
+    @objc open var digitCountrycode: String? {
         return isoToDigitCountryCodeDictionary[countryCode]
     }
     
     /// Image (Flag) of country
-    open var flag: UIImage? {
+    @objc open var flag: UIImage? {
         if image != nil {
             return image
         }
