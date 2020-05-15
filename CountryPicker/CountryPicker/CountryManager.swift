@@ -63,7 +63,7 @@ public enum CountryFilterOption {
     internal var filters: Set<CountryFilterOption> = [.countryName]
     
     
-    private init() {}
+    override private init() {}
     
     func loadCountries() throws {
         

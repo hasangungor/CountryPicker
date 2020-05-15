@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-@objc open class Country {
+@objc open class Country: NSObject {
 
     // MARK:- Variable
     @objc open var countryCode: String
