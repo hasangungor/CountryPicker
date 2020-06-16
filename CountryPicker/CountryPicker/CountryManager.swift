@@ -26,7 +26,7 @@ public enum CountryFilterOption {
 @objc open class CountryManager: NSObject {
     
     // MARK: - variable
-    private(set) var countries = [Country]()
+    @objc var countries = [Country]()
     
     private var countriesFilePath: String? {
         let bundle = Bundle(for: CountryManager.self)
@@ -63,7 +63,7 @@ public enum CountryFilterOption {
     internal var filters: Set<CountryFilterOption> = [.countryName]
     
     
-    override private init() {}
+    @objc override public init() {}
     
     func loadCountries() throws {
         
@@ -87,7 +87,7 @@ public enum CountryFilterOption {
         
     }
 
-    func allCountries() -> [Country] {
+    @objc public func allCountries() -> [Country] {
         return countries
     }
     
